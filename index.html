@@ -1,0 +1,77 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Starbucks Landing Page </title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <section>
+        <div class="circle"></div>
+        <header>
+            <!-- se ingreesa de esta forma para que se le pueda agergar un link  -->
+            <a href="#" ><img src="images/logo.png" class="logo" alt=""></a>
+            <!-- ul para una lista desordenada de elementos  -->
+            <div class="toggle" onclick="toggleMenu();"></div>
+            
+            <ul class="navigation">
+                <!-- li pora los elementos que iran dentro de la lista -->
+                <li><a href="/">Inicio</a></li>
+                <li><a href="#">Menú</a></li>
+                <li><a href="#">Productos nuevos</a></li>
+                <li><a href="#">Contactanos</a></li>
+            </ul>
+        </header>
+        <div  class="content">
+                <div class="textBox">
+                    <h2>Tenemos los  <br>mejores <span>Smartphones</span> </h2>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Est, dicta porro rerum quisquam fugit iure culpa, assumenda ea sequi ratione, consequatur cumque? Ipsa pariatur quo optio officiis minus earum dignissimos?</p>
+                    <a href="#">Conoce mas</a>
+        
+                </div>
+                    <div class="imgBox">
+                        <img src="images/3.png" class="starbucks" alt="">
+                    </div>
+        </div>
+           <!-- lista desordenada en la que se agregaran 3 imagenes -->
+        <ul class="thumb" >
+            <li> <img src="images/1.1.png" onclick="imgSlider('images/3.png');changeCircleColor('#000080')" alt=""></li>
+            <li> <img src="images/2.2.jpg" onclick="imgSlider('images/2.png');changeCircleColor('#C70039')" alt=""></li>
+            <li> <img src="images/5.5.png" onclick="imgSlider('images/1.png');changeCircleColor('#808080')" alt=""></li>
+
+        </ul>
+        <ul class="sci">
+            <li><a target="_blank" href=""><img src="images/facebook.png" alt="" ></a></li>
+            <li><a target="_blank" href=""><img src="images/instagram.png" alt=""></a></li>
+            <li><a target="_blank" href=""><img src="images/twitter.png" alt=""></a></li>
+
+        </ul>
+        
+    </section>
+
+        <script type="text/javascript">
+            
+        function imgSlider(anything){
+            document.querySelector('.starbucks').src = anything;
+        }
+        function changeCircleColor(color){
+            const circle =document.querySelector('.circle')
+            circle.style.background = color;
+        
+        }
+        function toggleMenu(){
+            var menuToggle = document.querySelector('.toggle');
+            var navigation = document.querySelector('.navigation')
+            menuToggle.classList.toggle('active')
+            navigation.classList.toggle('active')
+        }
+        </script>
+        
+
+
+        
+
+</body>
+</html>
